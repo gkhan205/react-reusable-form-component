@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 
 import './App.css';
+
+import Button from 'library/components/Button';
 import InputField from "library/components/InputField";
 import {Validators} from "library/utilities/Validator";
 
@@ -14,6 +16,11 @@ export default class App extends Component {
 
     handleChange = (key) => (value) => {
         this.setState({[key]: value});
+    };
+
+    handleClick = (event) => {
+        event.preventDefault();
+        alert('Button Clicked');
     };
 
     render() {
@@ -50,6 +57,14 @@ export default class App extends Component {
                         {check: Validators.email, message: 'Email is not valid'}
                     ]}
                     onChange={this.handleChange('email')}/>
+
+                <Button
+                    onClick={this.handleClick}
+                    value='Click me!'/>
+
+                <Button
+                    onClick={this.handleClick}
+                    value='Please login'/>
             </div>
         );
     }
