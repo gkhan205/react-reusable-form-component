@@ -6,6 +6,7 @@ import Button from 'library/components/Button';
 import InputField from "library/components/InputField";
 import Dropdown from "library/components/Dropdown";
 import {Validators} from "library/utilities/Validator";
+import Checkbox from "library/components/Checkbox";
 
 export default class App extends Component {
 
@@ -13,7 +14,8 @@ export default class App extends Component {
         text: '',
         number: '',
         email: '',
-        country: ''
+        country: '',
+        acceptance: false
     };
 
     handleChange = (key) => (value) => {
@@ -29,8 +31,12 @@ export default class App extends Component {
         this.setState({country});
     };
 
+    handleCheckbox = (acceptance) => {
+        this.setState({acceptance});
+    };
+
     render() {
-        const {text, country} = this.state;
+        const {text, country, acceptance} = this.state;
 
         return (
             <div className="container">
@@ -58,9 +64,16 @@ export default class App extends Component {
                         {value: 5, label: 'Russia'},
                         {value: 5, label: 'Italy'},
                     ]}
+                    styleClass='mt-3'
                     value={country}
                     placeholder='Select Country'
                     onChange={this.handleDropdown}
+                />
+
+                <Checkbox
+                    label='I Accept'
+                    selected={acceptance}
+                    onChange={this.handleCheckbox}
                 />
 
             </div>
