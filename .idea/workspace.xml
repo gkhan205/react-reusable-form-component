@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b79cb36-029e-4f26-b760-88bc988347e8" name="Default Changelist" comment="" />
+    <list default="true" id="3b79cb36-029e-4f26-b760-88bc988347e8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -76,7 +79,9 @@
       <updated>1576526515043</updated>
       <workItem from="1576526516338" duration="4128000" />
       <workItem from="1576564376351" duration="946000" />
-      <workItem from="1576666560507" duration="2716000" />
+      <workItem from="1576666560507" duration="3208000" />
+      <workItem from="1576876670709" duration="467000" />
+      <workItem from="1576948194872" duration="1155000" />
     </task>
     <servers />
   </component>
@@ -84,25 +89,26 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1419" height="213" key="GridCell.Tab.0.bottom" timestamp="1576668567412">
+    <state width="1419" height="213" key="GridCell.Tab.0.bottom" timestamp="1576948223428">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
-    <state width="1419" height="213" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1576668567412" />
-    <state width="1419" height="213" key="GridCell.Tab.0.center" timestamp="1576668567410">
+    <state width="1419" height="213" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1576948223428" />
+    <state width="1419" height="213" key="GridCell.Tab.0.center" timestamp="1576948223427">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
-    <state width="1419" height="213" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1576668567410" />
-    <state width="1419" height="213" key="GridCell.Tab.0.left" timestamp="1576668567409">
+    <state width="1419" height="213" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1576948223427" />
+    <state width="1419" height="213" key="GridCell.Tab.0.left" timestamp="1576948223426">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
-    <state width="1419" height="213" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1576668567409" />
-    <state width="1419" height="213" key="GridCell.Tab.0.right" timestamp="1576668567411">
+    <state width="1419" height="213" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1576948223426" />
+    <state width="1419" height="213" key="GridCell.Tab.0.right" timestamp="1576948223427">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
-    <state width="1419" height="213" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1576668567411" />
-    <state x="229" y="74" key="SettingsEditor" timestamp="1576666597213">
+    <state width="1419" height="213" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1576948223427" />
+    <state x="229" y="74" key="SettingsEditor" timestamp="1576948221473">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
+    <state x="229" y="74" key="SettingsEditor/0.23.1440.825@0.23.1440.825" timestamp="1576948221473" />
     <state x="229" y="74" key="SettingsEditor/1440.23.1920.1057/0.23.1440.825@0.23.1440.825" timestamp="1576666597213" />
   </component>
 </project>

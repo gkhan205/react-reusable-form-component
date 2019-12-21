@@ -4,6 +4,7 @@ import './App.css';
 
 import Button from 'library/components/Button';
 import InputField from "library/components/InputField";
+import Dropdown from "library/components/Dropdown";
 import {Validators} from "library/utilities/Validator";
 
 export default class App extends Component {
@@ -11,7 +12,8 @@ export default class App extends Component {
     state = {
         text: '',
         number: '',
-        email: ''
+        email: '',
+        country: ''
     };
 
     handleChange = (key) => (value) => {
@@ -23,8 +25,12 @@ export default class App extends Component {
         alert('Button Clicked');
     };
 
+    handleDropdown = (country) => {
+        this.setState({country});
+    };
+
     render() {
-        const {text, number, email} = this.state;
+        const {text, country} = this.state;
 
         return (
             <div className="container">
@@ -38,33 +44,25 @@ export default class App extends Component {
                     ]}
                     onChange={this.handleChange('text')}/>
 
-                <InputField
-                    value={number}
-                    placeholder='Number field'
-                    type='text'
-                    label='Number'
-                    validators={[
-                        {check: Validators.number, message: 'Number is not valid'}
-                    ]}
-                    onChange={this.handleChange('number')}/>
-
-                <InputField
-                    value={email}
-                    placeholder='Email Field'
-                    type='email'
-                    label='Email'
-                    validators={[
-                        {check: Validators.email, message: 'Email is not valid'}
-                    ]}
-                    onChange={this.handleChange('email')}/>
 
                 <Button
                     onClick={this.handleClick}
                     value='Click me!'/>
 
-                <Button
-                    onClick={this.handleClick}
-                    value='Please login'/>
+                <Dropdown
+                    data={[
+                        {value: 1, label: 'India'},
+                        {value: 2, label: 'USA'},
+                        {value: 3, label: 'UK'},
+                        {value: 4, label: 'Germany'},
+                        {value: 5, label: 'Russia'},
+                        {value: 5, label: 'Italy'},
+                    ]}
+                    value={country}
+                    placeholder='Select Country'
+                    onChange={this.handleDropdown}
+                />
+
             </div>
         );
     }
