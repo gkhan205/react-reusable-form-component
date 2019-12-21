@@ -13,6 +13,7 @@ const Checkbox = ({label, selected, styleClass, onChange}) => {
             <label>
                 <input
                     type="checkbox"
+                    className='mr-2'
                     value={selected}
                     defaultChecked={selected}
                     onChange={handleChange}/>

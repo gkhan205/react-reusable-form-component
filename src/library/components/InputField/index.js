@@ -15,13 +15,24 @@ const InputField = ({value, label, placeholder, validators, type, onChange}) => 
     return (
         <div className="form-group">
             {label && <label htmlFor="app-input-field">{label}</label>}
-            <input
-                type={type}
-                value={value}
-                className='form-control'
-                placeholder={placeholder}
-                onChange={handleChange}
-            />
+
+            {type === 'textarea' ? (
+                <textarea
+                    className='form-control'
+                    placeholder={placeholder}
+                    value={value}
+                    defaultValue={value}
+                    onChange={handleChange}
+                />
+            ) : (
+                <input
+                    type={type}
+                    value={value}
+                    className='form-control'
+                    placeholder={placeholder}
+                    onChange={handleChange}
+                />
+            )}
             {error && <span className='text-danger'>{error.message}</span>}
         </div>
     )

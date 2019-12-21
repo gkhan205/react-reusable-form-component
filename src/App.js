@@ -15,6 +15,7 @@ export default class App extends Component {
         number: '',
         email: '',
         country: '',
+        message: '',
         acceptance: false
     };
 
@@ -36,24 +37,20 @@ export default class App extends Component {
     };
 
     render() {
-        const {text, country, acceptance} = this.state;
+        const {text, country, message, acceptance} = this.state;
 
         return (
             <div className="container">
                 <h2>React Reusable Form Component</h2>
-                <h4>Input Field</h4>
+                <hr/>
                 <InputField
                     value={text}
                     type='text'
+                    placeholder='Enter text here...'
                     validators={[
                         {check: Validators.required, message: 'This field is required'}
                     ]}
                     onChange={this.handleChange('text')}/>
-
-
-                <Button
-                    onClick={this.handleClick}
-                    value='Click me!'/>
 
                 <Dropdown
                     data={[
@@ -70,11 +67,24 @@ export default class App extends Component {
                     onChange={this.handleDropdown}
                 />
 
+                <InputField
+                    value={message}
+                    type='textarea'
+                    placeholder='Enter message!'
+                    validators={[
+                        {check: Validators.required, message: 'This field is required'}
+                    ]}
+                    onChange={this.handleChange('message')}/>
+
                 <Checkbox
                     label='I Accept'
                     selected={acceptance}
                     onChange={this.handleCheckbox}
                 />
+
+                <Button
+                    onClick={this.handleClick}
+                    value='Click me!'/>
 
             </div>
         );
