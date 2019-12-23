@@ -5,8 +5,8 @@
 |1. | Input Field | Published |
 |2. | Button | Published |
 |3. | Dropdown | Published |
-|4. | TextArea | Editing in progress |
-|5. | Checkbox | Editing in progress |
+|4. | TextArea | Published |
+|5. | Checkbox | Published |
 
 [Please watch complete tutorial playlist](https://www.youtube.com/playlist?list=PLtUG3cTN2la1bCd3dvl2Vm9PBo7F413WK)
 
