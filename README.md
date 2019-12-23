@@ -4,7 +4,7 @@
 |--- | --- | --- |
 |1. | Input Field | Published |
 |2. | Button | Published |
-|3. | Dropdown | Editing in progress |
+|3. | Dropdown | Published |
 |4. | TextArea | Editing in progress |
 |5. | Checkbox | Editing in progress |
 
