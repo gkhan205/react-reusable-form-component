@@ -3,17 +3,17 @@ import PropTypes from 'prop-types';
 
 import {validateInput} from "library/utilities/Validator";
 
-const InputField = ({value, label, placeholder, validators, type, onChange}) => {
+const InputField = ({value, label,field, placeholder, validators, type, onChange}) => {
     const [error, setError] = useState(false);
 
     const handleChange = (event) => {
         const {value} = event.target;
         setError(validateInput(validators, value));
-        onChange(value);
+        onChange(value, field, error);
     };
 
     return (
-        <div className="form-group">
+        <>
             {label && <label htmlFor="app-input-field">{label}</label>}
 
             {type === 'textarea' ? (
@@ -21,7 +21,6 @@ const InputField = ({value, label, placeholder, validators, type, onChange}) => 
                     className='form-control'
                     placeholder={placeholder}
                     value={value}
-                    defaultValue={value}
                     onChange={handleChange}
                 />
             ) : (
@@ -34,7 +33,7 @@ const InputField = ({value, label, placeholder, validators, type, onChange}) => 
                 />
             )}
             {error && <span className='text-danger'>{error.message}</span>}
-        </div>
+        </>
     )
 };
 
@@ -44,6 +43,7 @@ InputField.propTypes = {
     placeholder: PropTypes.string,
     validators: PropTypes.array,
     type: PropTypes.string,
+    field: PropTypes.string,
     onChange: PropTypes.func.isRequired
 };
 
@@ -52,6 +52,7 @@ InputField.defaultProps = {
   label: '',
   placeholder: '',
   type: 'text',
+  field: '',
   validators: []
 };
 

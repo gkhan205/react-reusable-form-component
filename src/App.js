@@ -2,11 +2,12 @@ import React, {Component} from 'react';
 
 import './App.css';
 
-import Button from 'library/components/Button';
-import InputField from "library/components/InputField";
-import Dropdown from "library/components/Dropdown";
-import {Validators} from "library/utilities/Validator";
-import Checkbox from "library/components/Checkbox";
+// import Button from 'library/components/Button';
+// import InputField from "library/components/InputField";
+// import Dropdown from "library/components/Dropdown";
+// import {Validators} from "library/utilities/Validator";
+// import Checkbox from "library/components/Checkbox";
+import FormContainer from 'pages/FormContainer';
 
 export default class App extends Component {
 
@@ -37,13 +38,13 @@ export default class App extends Component {
     };
 
     render() {
-        const {text, country, message, acceptance} = this.state;
+        //const {text, country, message, acceptance} = this.state;
 
         return (
             <div className="container">
                 <h2>React Reusable Form Component</h2>
                 <hr/>
-                <InputField
+                {/* <InputField
                     value={text}
                     type='text'
                     placeholder='Enter text here...'
@@ -84,7 +85,9 @@ export default class App extends Component {
 
                 <Button
                     onClick={this.handleClick}
-                    value='Click me!'/>
+                    value='Click me!'/> */}
+
+                    <FormContainer/>
 
             </div>
         );

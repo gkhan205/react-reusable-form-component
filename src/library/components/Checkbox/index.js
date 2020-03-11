@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Checkbox = ({label, selected, styleClass, onChange}) => {
+const Checkbox = ({label,field, selected, styleClass, onChange}) => {
 
     const handleChange = (event) => {
         const {checked} = event.target;
-        onChange(checked);
+        onChange(checked, field);
     };
 
     return (
-        <div className={`form-group ${styleClass}`}>
+        <>
             <label>
                 <input
                     type="checkbox"
@@ -20,11 +20,12 @@ const Checkbox = ({label, selected, styleClass, onChange}) => {
 
                 {label}
             </label>
-        </div>
+        </>
     )
 };
 
 Checkbox.propTypes = {
+    field: PropTypes.string,
     styleClass: PropTypes.string,
     selected: PropTypes.bool.isRequired,
     label: PropTypes.string.isRequired,
@@ -32,7 +33,8 @@ Checkbox.propTypes = {
 };
 
 Checkbox.defaultProps = {
-    styleClass: ''
+    styleClass: '',
+    field: ''
 };
 
 export default Checkbox;
